@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CryptoPass | Criptografador de Senhas</title>
+
+    <!-- Fonte Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>🔐 CryptoPass</h1>
+
+    <p>
+        Digite uma senha ou código e veja como ela é criptografada passo a passo.
+    </p>
+
+</header>
+
+<main class="container">
+
+    <section class="card">
+
+        <h2>Digite sua senha</h2>
+
+        <textarea
+            id="senha"
+            placeholder="Exemplo: MinhaSenha123"
+            rows="5"
+        ></textarea>
+
+        <button id="btnCriptografar">
+            Criptografar
+        </button>
+
+    </section>
+
+    <section class="resultado">
+
+        <div class="box">
+
+            <h3>Senha Original</h3>
+
+            <p id="original">
+                —
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <h3>Senha Criptografada</h3>
+
+            <p id="criptografada">
+                —
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="passos">
+
+        <h2>Passo a passo da criptografia</h2>
+
+        <ol id="listaPassos">
+
+            <li>
+                Digite uma senha e clique em
+                <strong>Criptografar</strong>.
+            </li>
+
+        </ol>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        Projeto desenvolvido em HTML, CSS e JavaScript.
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
