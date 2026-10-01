@@ -1,0 +1,435 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --azul:#79C7FF;
+    --azul-claro:#DFF5FF;
+
+    --rosa:#FF8CC8;
+    --rosa-claro:#FFD7EB;
+
+    --offwhite:#FCFBF8;
+
+    --texto:#2F3552;
+    --texto2:#626B89;
+
+    --branco:#ffffff;
+
+    --gradiente:linear-gradient(135deg,#79C7FF,#FF8CC8);
+
+    --sombra:0 12px 35px rgba(0,0,0,.10);
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+    130deg,
+    #DFF5FF 0%,
+    #FCFBF8 45%,
+    #FFD7EB 100%
+    );
+
+    min-height:100vh;
+
+    color:var(--texto);
+
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    text-align:center;
+
+    padding:55px 20px 30px;
+
+}
+
+header h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    background:var(--gradiente);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:15px;
+
+}
+
+header p{
+
+    color:var(--texto2);
+
+    font-size:1.1rem;
+
+}
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:30px;
+
+    padding-bottom:50px;
+
+}
+
+
+/* ===========================
+   CARD PRINCIPAL
+=========================== */
+
+.card{
+
+    background:rgba(255,255,255,.70);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    color:var(--texto);
+
+}
+
+
+/* ===========================
+   TEXTAREA
+=========================== */
+
+textarea{
+
+    width:100%;
+
+    min-height:170px;
+
+    resize:none;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    border:2px solid #cfe8ff;
+
+    outline:none;
+
+    background:#ffffff;
+
+    font-size:17px;
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--texto);
+
+    transition:.3s;
+
+}
+
+textarea:focus{
+
+    border-color:var(--rosa);
+
+    box-shadow:0 0 15px rgba(255,140,200,.35);
+
+}
+
+
+/* ===========================
+   BOTÃO
+=========================== */
+
+button{
+
+    margin-top:25px;
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:var(--gradiente);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 25px rgba(121,199,255,.35);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* ===========================
+   RESULTADOS
+=========================== */
+
+.resultado{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.box{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:var(--sombra);
+
+    border:2px solid rgba(121,199,255,.15);
+
+    transition:.35s;
+
+}
+
+.box:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.box h3{
+
+    color:#5d6cff;
+
+    margin-bottom:15px;
+
+}
+
+.box p{
+
+    word-break:break-word;
+
+    font-size:17px;
+
+    color:var(--texto);
+
+    line-height:1.7;
+
+}
+
+
+/* ===========================
+   PASSOS
+=========================== */
+
+.passos{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.passos h2{
+
+    margin-bottom:25px;
+
+    color:var(--texto);
+
+}
+
+.passos ol{
+
+    padding-left:25px;
+
+}
+
+.passos li{
+
+    margin-bottom:15px;
+
+    color:var(--texto2);
+
+    line-height:1.8;
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:50px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:var(--texto2);
+
+}
+
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.card,
+.box,
+.passos{
+
+    animation:subir .8s ease;
+
+}
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+   SCROLL
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef7ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(#79C7FF,#FF8CC8);
+
+    border-radius:20px;
+
+}
+
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:850px){
+
+    .resultado{
+
+        grid-template-columns:1fr;
+
+    }
+
+    header h1{
+
+        font-size:2.2rem;
+
+    }
+
+}
+
+@media(max-width:550px){
+
+    .card,
+    .passos,
+    .box{
+
+        padding:20px;
+
+    }
+
+    button{
+
+        font-size:16px;
+
+    }
+
+    textarea{
+
+        min-height:140px;
+
+    }
+
+}
